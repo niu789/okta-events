@@ -21,3 +21,5 @@ in Sumo Logic with the following settings:
 - **Frequency**: Every 5 minutes
 - **Command**: /usr/bin/python
 - **Script**: `python oktaEvents.py <orgid/subdomain> <token> <relative_cutoff_seconds>`
+  - `relative_cutoff_seconds` should be equal to the frequency you choose.  For
+    5 minutes, this value would be 300.
