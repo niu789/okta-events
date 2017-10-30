@@ -1,6 +1,7 @@
 # Okta Event Collector
 Pulls events from Okta and sends them to Sumo Logic.
-*NOTE* As of Sep 2017, this repo is deprecated. Please use our official collection [method](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Okta/Collect-Okta-Logs) to collect Okta events. 
+
+*NOTE:* As of Sep 2017, this repository is deprecated. Please use our official collection [method](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Okta/Collect-Okta-Logs) to collect Okta events. 
 
 # Prerequisites
 - Python 2.6 works, but 2.7 is recommended.
