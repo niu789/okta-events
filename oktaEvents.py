@@ -17,7 +17,7 @@ params = { 'startDate': startTime.isoformat()[:-3] + 'Z' }
 
 events = requests.get(url, headers=headers, params=params)
 for e in events.json():
-    print e
+    print (e)
 
 while 'next' in events.links:
     events = requests.get(events.links['next']['url'], headers=headers)
