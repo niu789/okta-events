@@ -4,12 +4,14 @@ import re
 import requests
 import sys
 
-org = sys.argv[1]
+#org = sys.argv[1]
+apiEndpoint = sys.argv[1]
 token = sys.argv[2]
 startTime = sys.argv[3]
 
+
 #url = 'https://' + org + '.okta.com/api/v1/events'
-url = 'https://' + org + '.okta.com/api/v1/logs'
+url = apiEndpoint + '/api/v1/logs'
 headers = { 'Authorization': 'SSWS ' + token }
 #now = datetime.now()
 
@@ -19,7 +21,6 @@ headers = { 'Authorization': 'SSWS ' + token }
 params = { 'since': startTime[:-3] + 'Z' }
 
 events = requests.get(url, headers=headers, params=params)
-#events.text
 i = 0
 for e in events.json():
     if i == 0:
