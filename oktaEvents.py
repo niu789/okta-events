@@ -18,7 +18,7 @@ headers = { 'Authorization': 'SSWS ' + token }
 # Okta API breaks with microseconds
 #params = { 'startDate': startTime.isoformat()[:-3] + 'Z' }
 #params = { 'startDate': startTime[:-3] + 'Z' }
-params = { 'since': startTime[:-3] + 'Z' }
+params = { 'since': startTime[:-3] + 'Z', 'limit': 1000 }
 
 events = requests.get(url, headers=headers, params=params)
 i = 0
